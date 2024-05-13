@@ -1,0 +1,62 @@
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-gap - отступ между блоками */
+  grid-gap: 45px;
+  width: 80%;
+  max-width: 1200px;
+  /* Атоматом ставит везде отступы так чтобы все было по центру, а сверху и снизу отступы с константы */
+  margin: var(--spacing-large) auto;
+}
+
+.products-element {
+  display: flex;
+  /* flex-direction - указывает направление - колонки, столбы или еще что */
+  flex-direction: column;
+  /* justify-content: flex-end; - прижимает все к нижнему краю */
+  justify-content: flex-end;
+  padding: 25px 20px;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-big);
+}
+
+.products-element__name {
+  /* Ставит все названия на один уровень */
+  margin-bottom: auto;
+  font-weight: bold;
+}
+
+.products-element__img {
+  width: 100%;
+  height: 270px;
+  /* object-fit: contain; - убирает искожение и помогает картинке полность вмещаться */
+  object-fit: contain;
+  margin-top: var(--spacing-medium);
+}
+
+.products-element__price {
+  display: flex;
+  flex-direction: column;
+  padding: auto;
+  margin-top: var(--spacing-medium);
+  color: var(--color-unaccent);
+}
+
+.products-element__btn {
+  width: 100%;
+  padding: var(--spacing-small) var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+  border: 1px solid var(--color-unaccent);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+/* Это стиль для активной кнопки, то есть когда мы можем с ней что-то сделать */
+.products-element__btn_active {
+  border: 1px solid transparent;
+  background-image: var(--linear-gradient);
+}

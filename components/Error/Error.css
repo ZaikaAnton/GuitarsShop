@@ -1,0 +1,8 @@
+.error-message {
+  padding: 20px 40px;
+  text-align: center;
+  background-color: var(--color-error-light);
+  box-shadow: var(--box-shadow);
+  color: var(--color-white);
+  border-left: 7px solid var(--color-error-dark);
+}
